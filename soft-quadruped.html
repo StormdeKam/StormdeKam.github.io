@@ -135,10 +135,21 @@
     </section>
 
     <section>
-      <h2>Figures</h2>
-      <p>Images and short clips from <code>figures/soft-quadruped/</code>.</p>
+      <h2>Methods</h2>
       <figure>
-        <img src="figures/soft-quadruped/cover-image.png" alt="Quadruped cover" style="max-width:100%;height:auto;">
+        <img src="figures/soft-quadruped/Simulation environment.png" alt="Feet sensor closeup" style="max-width:100%;height:auto;">
+        <figcaption>Simulation environment for the soft quadruped robot.</figcaption>
+      </figure>
+      </figure>
+        <img src="figures/soft-quadruped/Overview of the presented approach.png" alt="Feet sensor closeup" style="max-width:100%;height:auto;">
+        <figcaption>Overview of the learning and control framework. (A) Three-stage policy training pipeline. A heuristic feedforward reference gait is first constructed through iterative experiments on the real robot, inspired by the slow, stable stepping pattern of an elephant. A multilayer perceptron (MLP) is then trained in simulation to imitate this reference gait. The resulting policy is subsequently fine-tuned using reinforcement learning in simulation, with domain randomization applied to improve sim-to-real transfer. (B) Architecture of the learned controller. The policy network outputs high-level actions that are translated into valve commands for actuation. Tactile sensor readings are processed through an MLP to estimate ground reaction forces (GRFs) and fused with IMU measurements to form the robot’s state for closed-loop control.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <figure>
+        <img src="figures/soft-quadruped/real_robot_no_bckgnd.png" alt="Quadruped cover" style="max-width:100%;height:auto;">
         <figcaption>Final prototype.</figcaption>
       </figure>
       <figure>
@@ -152,14 +163,6 @@
       <figure>
         <img src="figures/soft-quadruped/Experimental results.png" alt="Feet sensor closeup" style="max-width:100%;height:auto;">
         <figcaption>Experimental results of the pneumatic actuator under pressurization of one, two or three chambers.</figcaption>
-      </figure>
-      <figure>
-        <img src="figures/soft-quadruped/Simulation environment.png" alt="Feet sensor closeup" style="max-width:100%;height:auto;">
-        <figcaption>Simulation environment for the soft quadruped robot.</figcaption>
-      </figure>
-      </figure>
-        <img src="figures/soft-quadruped/Overview of the presented approach.png" alt="Feet sensor closeup" style="max-width:100%;height:auto;">
-        <figcaption>Overview of the learning and control framework. (A) Three-stage policy training pipeline. A heuristic feedforward reference gait is first constructed through iterative experiments on the real robot, inspired by the slow, stable stepping pattern of an elephant. A multilayer perceptron (MLP) is then trained in simulation to imitate this reference gait. The resulting policy is subsequently fine-tuned using reinforcement learning in simulation, with domain randomization applied to improve sim-to-real transfer. (B) Architecture of the learned controller. The policy network outputs high-level actions that are translated into valve commands for actuation. Tactile sensor readings are processed through an MLP to estimate ground reaction forces (GRFs) and fused with IMU measurements to form the robot’s state for closed-loop control.</figcaption>
       </figure>
       <figure>
         <video controls src="figures/soft-quadruped/walk.mp4" style="max-width:100%;height:auto;">Your browser does not support the video tag.</video>
