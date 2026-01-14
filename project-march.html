@@ -15,19 +15,91 @@
   <main>
     <section>
       <h2>Overview</h2>
-      <p>Mechanical design of exoskeleton joints developed within a multidisciplinary team.</p>
+      <p>Mechanical design of exoskeleton joints developed within a multidisciplinary team. Work focused on robust joint kinematics, lightweight structural design and manufacturable subassemblies under tight deadlines.</p>
     </section>
 
     <section>
-      <h2>Figures</h2>
-      <p>Placeholder figure — add images to the `images/` folder and update paths below.</p>
-      <figure>
-        <img src="images/project-march-fig1.png" alt="Project MARCH figure" style="max-width:100%;height:auto;">
-        <figcaption>Figure 1: Concept sketch (placeholder).</figcaption>
-      </figure>
+      <h2>Summary</h2>
+      <p>This project delivered a set of modular joint components for an assistive exoskeleton used in gait support. My role included CAD, tolerance analysis, rapid prototyping and verification testing. Key outcomes: reduced part count, improved joint stiffness-to-weight ratio, and simplified assembly procedure.</p>
+      <ul>
+        <li>Role: Mechanical designer (CAD, prototyping)</li>
+        <li>Tools: SolidWorks, 3D printing, hand calculations</li>
+        <li>Duration: 6 months</li>
+      </ul>
     </section>
 
-    <p><a href="index.html">← Back to home</a></p>
+    <section>
+      <h2>Media & Design</h2>
+      <p>Gallery — media and images are pulled from <code>figures/project-march/</code>. Layout is responsive: media on the left, text and design images on the right.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 400px;gap:20px;align-items:start;">
+
+        <div>
+          <!-- Summary YouTube (embedded) -->
+          <div style="margin-bottom:14px;">
+            <div style="position:relative;padding-top:56.25%;background:#000;border-radius:8px;overflow:hidden;"> 
+              <iframe src="https://www.youtube.com/embed/sCulnQ4EEDU" title="Project MARCH summary" style="position:absolute;left:0;top:0;width:100%;height:100%;border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <figcaption style="font-size:0.9rem;margin-top:6px;color:#cbd8ea">Summary video (YouTube)</figcaption>
+          </div>
+
+          <!-- Demo videos from releases -->
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+            <div>
+              <video controls playsinline style="width:100%;border-radius:8px;">
+                <source src="https://github.com/StormdeKam/StormdeKam.github.io/releases/download/v1.0/Linear.joint.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption style="font-size:0.85rem;margin-top:6px;color:#cbd8ea">Linear joint demo (from GitHub release)</figcaption>
+            </div>
+            <div>
+              <video controls playsinline style="width:100%;border-radius:8px;">
+                <source src="https://github.com/StormdeKam/StormdeKam.github.io/releases/download/v1.0/Rotational.joint.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption style="font-size:0.85rem;margin-top:6px;color:#cbd8ea">Rotational joint demo (from GitHub release)</figcaption>
+            </div>
+          </div>
+        </div>
+
+        <aside style="background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;">
+          <h3 style="margin-top:0;color:var(--accent)">Design notes</h3>
+          <p style="color:#e6eef8;line-height:1.5">The final design focused on modularity and manufacturability. Below are the final renders and notes on production. Click images to open the full-size files.</p>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+            <a href="figures/project-march/final design front.jpeg"><img src="figures/project-march/final design front.jpeg" alt="Final design front" style="width:48%;border-radius:6px;object-fit:cover"></a>
+            <a href="figures/project-march/final design back.jpeg"><img src="figures/project-march/final design back.jpeg" alt="Final design back" style="width:48%;border-radius:6px;object-fit:cover"></a>
+          </div>
+
+          <h4 style="margin-bottom:6px;margin-top:12px;color:#a6f0ff">CNC & Production</h4>
+          <p style="color:#e6eef8;font-size:0.95rem">CNC'd parts were produced in-house for small-batch testing. Key learnings: tooling fixturing reduced setup time, and standard stock sizes minimized waste.</p>
+
+          <ul style="color:#cbd8ea;font-size:0.95rem">
+            <li>Material: 7075-T6 / aluminium (selected parts)</li>
+            <li>Finish: anodized or bead-blasted depending on function</li>
+            <li>Tolerances: +/- 0.1 mm where mating surfaces required</li>
+          </ul>
+        </aside>
+
+      </div>
+
+      <!-- Additional gallery row (full width) -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px;">
+        <figure>
+          <img src="figures/project-march/fig1.jpg" alt="Exploded view" style="width:100%;border-radius:8px;object-fit:cover;">
+          <figcaption style="font-size:0.9rem;color:#cbd8ea">Exploded view showing subassemblies.</figcaption>
+        </figure>
+        <figure>
+          <img src="figures/project-march/fig2.jpg" alt="Prototype test" style="width:100%;border-radius:8px;object-fit:cover;">
+          <figcaption style="font-size:0.9rem;color:#cbd8ea">Prototype on test rig.</figcaption>
+        </figure>
+        <figure>
+          <img src="figures/project-march/cover.jpg" alt="Joint prototype" style="width:100%;border-radius:8px;object-fit:cover;">
+          <figcaption style="font-size:0.9rem;color:#cbd8ea">Prototype close-up.</figcaption>
+        </figure>
+      </div>
+
+    <p style="margin-top:22px;"><a href="index.html">← Back to home</a></p>
   </main>
 
   <footer>
