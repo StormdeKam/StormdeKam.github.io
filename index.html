@@ -106,7 +106,7 @@
       box-shadow: 0 10px 30px rgba(2,6,23,0.6);
     }
 
-    /* Landscape project images */
+    /* Default image format: landscape */
     .thumb {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -124,6 +124,21 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    /* Project-specific image formats */
+    .thumb.portrait {
+      aspect-ratio: 3 / 4;
+    }
+
+    .thumb.square {
+      aspect-ratio: 1 / 1;
+    }
+
+    /* Show the complete robots without cropping */
+    .thumb.portrait img,
+    .thumb.square img {
+      object-fit: contain;
     }
 
     .card h3 {
@@ -229,7 +244,7 @@
 
         <!-- Project MARCH -->
         <article class="card" aria-labelledby="p1-title">
-          <a class="thumb" href="project-march.html" title="Project MARCH">
+          <a class="thumb portrait" href="project-march.html" title="Project MARCH">
             <img
               src="figures/project-march/final design front.jpeg"
               alt="Project MARCH exoskeleton"
@@ -254,7 +269,7 @@
 
         <!-- Soft Quadruped -->
         <article class="card" aria-labelledby="p3-title">
-          <a class="thumb" href="soft-quadruped.html" title="Soft Quadruped">
+          <a class="thumb square" href="soft-quadruped.html" title="Soft Quadruped">
             <img
               src="figures/soft-quadruped/cover-image.png"
               alt="Soft quadruped robot"
