@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H2L Robotics — Storm de Kam</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7dd3fc;
+      --accent-light:#a6f0ff; --muted:#94a3b8;
+      --glass:rgba(255,255,255,0.04);
+      --radius:12px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background:linear-gradient(180deg,#071026 0%,var(--bg) 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      padding:28px 16px;
+      text-align:center;
+      background:linear-gradient(0deg,rgba(255,255,255,0.02),transparent);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    header h1{margin:0;font-size:1.8rem;letter-spacing:0.6px}
+    header p{margin:6px 0 0;color:var(--muted)}
+    main{max-width:var(--max);margin:28px auto;padding:0 18px 80px}
+    section{
+      margin:22px 0;padding:18px;
+      background:var(--glass);border-radius:12px;
+    }
+    section h2{margin:0 0 12px;color:var(--accent)}
+    p{line-height:1.6}
+    .muted{color:var(--muted)}
+    figure{margin:12px 0}
+    figure img, figure video{
+      width:100%;display:block;
+      border-radius:var(--radius);
+    }
+    figure img{object-fit:cover}
+    figcaption{
+      font-size:0.85rem;color:var(--muted);margin-top:6px;
+    }
+    .media-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin-top:12px;
+    }
+    .media-grid figure{margin:0}
+    .wide-image{
+      width:100%;max-height:520px;
+      object-fit:cover;border-radius:var(--radius);
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;margin:20px 0;
+    }
+    .stat{
+      background:rgba(255,255,255,0.04);
+      padding:16px;border-radius:10px;text-align:center;
+    }
+    .stat strong{
+      display:block;font-size:1.6rem;color:var(--accent);
+    }
+    .stat span{font-size:0.85rem;color:var(--muted)}
+    ul{line-height:1.8}
+    a{color:var(--accent-light)}
+    @media(max-width:700px){
+      .media-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      header h1{font-size:1.4rem}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>H2L Robotics</h1>
+  <p>Robotics Development, Integration and Field Commissioning</p>
+</header>
+
+<main>
+
+  <!-- Cover image -->
+  <section>
+    <figure>
+      <img
+        src="figures/h2l-robotics/cover-image.jpg"
+        alt="Agricultural robotic tulip selection machine"
+        class="wide-image">
+      <figcaption>
+        Agricultural robotic systems developed by H2L Robotics.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Summary -->
+  <section>
+    <h2>Summary</h2>
+
+    <p>
+      At H2L Robotics, I worked on the development, commissioning and
+      field testing of agricultural robotic systems. My role combined
+      hands-on mechanical work with mechatronic troubleshooting,
+      hardware integration and collaboration with the engineering team.
+      I contributed to commissioning a new generation of robotic systems
+      in Italy and independently installed and tested a new oil-spraying
+      subsystem on three tulip selection robots in New Zealand.
+    </p>
+
+    <ul>
+      <li><strong>Role:</strong> Mechatronics Service Engineer</li>
+      <li><strong>Focus:</strong> Hardware integration, commissioning, prototyping and troubleshooting</li>
+      <li><strong>Locations:</strong> Netherlands, Italy and New Zealand</li>
+      <li><strong>Duration:</strong> February – October 2026</li>
+    </ul>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>3</strong>
+        <span>Robots commissioned with the new subsystem</span>
+      </div>
+      <div class="stat">
+        <strong>100+</strong>
+        <span>Growers supported</span>
+      </div>
+      <div class="stat">
+        <strong>3</strong>
+        <span>Countries of field experience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Zealand -->
+  <section>
+    <h2>Subsystem Installation and Testing – New Zealand</h2>
+
+    <p>
+      I independently travelled to New Zealand to install and commission
+      a new oil-spraying subsystem on three tulip selection robots.
+      The work involved integrating the new hardware into the existing
+      robotic systems, checking the installation and testing its
+      operation on-site.
+    </p>
+
+    <figure>
+      <video controls playsinline preload="metadata">
+        <source
+          src="figures/h2l-robotics/oil_spray_slomo.mp4"
+          type="video/mp4">
+      </video>
+      <figcaption>
+        Slow-motion footage of the oil-spraying system during testing.
+      </figcaption>
+    </figure>
+
+    <p>
+      The installation and testing required working directly with the
+      existing machine hardware and verifying that the new subsystem
+      operated as intended within the complete robotic system.
+    </p>
+  </section>
+
+  <!-- Italy -->
+  <section>
+    <h2>Commissioning – Italy</h2>
+
+    <p>
+      Together with a colleague, I contributed to commissioning a new
+      generation of agricultural robotic systems at a customer site
+      in Italy. This involved working directly with the machines during
+      installation and initial testing to support their deployment.
+    </p>
+
+    <figure>
+      <video controls playsinline preload="metadata">
+        <source
+          src="figures/h2l-robotics/H2L_potato_testrun_italy.mp4"
+          type="video/mp4">
+      </video>
+      <figcaption>
+        Testing a new generation of agricultural robotic systems in Italy.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Other engineering work -->
+  <section>
+    <h2>Prototyping and Field Troubleshooting</h2>
+
+    <p>
+      Alongside commissioning, I supported product development and
+      field operations through mechanical prototyping, test setups
+      and mechatronic troubleshooting. I worked on issues involving
+      mechanical components, electronics, sensors and software,
+      often diagnosing problems directly on customer machines.
+    </p>
+
+    <ul>
+      <li>Designed and built mechanical prototypes and test setups.</li>
+      <li>Performed hardware verification and functional testing.</li>
+      <li>Diagnosed mechanical, electrical and sensor-related faults.</li>
+      <li>Worked with customers and communicated technical findings
+          to the engineering team.</li>
+    </ul>
+  </section>
+
+  <p><a href="index.html">← Back to home</a></p>
+
+</main>
+
+<footer>
+  <p>© 2026 Storm de Kam</p>
+</footer>
+
+</body>
+</html>
