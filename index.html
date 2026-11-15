@@ -1,4 +1,4 @@
-<!-- ...existing code... -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,66 +6,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Storm de Kam – Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --accent:#7dd3fc; --accent-light:#a6f0ff; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
-      --radius:12px; --max:1100px;
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #7dd3fc;
+      --accent-light: #a6f0ff;
+      --muted: #94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 12px;
+      --max: 1100px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#071026 0%,var(--bg) 60%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+
+    * {
+      box-sizing: border-box;
     }
-    header{
-      padding:28px 16px; text-align:center; background:linear-gradient(0deg,rgba(255,255,255,0.02),transparent);
-      border-bottom:1px solid rgba(255,255,255,0.03);
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071026 0%, var(--bg) 60%);
+      color: #e6eef8;
+      -webkit-font-smoothing: antialiased;
     }
-    header h1{margin:0;font-size:1.8rem;letter-spacing:0.6px}
-    header p{margin:6px 0 0;color:var(--muted)}
-    main{max-width:var(--max);margin:28px auto;padding:0 18px 80px}
-    section{margin:22px 0;padding:18px;background:var(--glass);border-radius:12px}
-    section h2{margin:0 0 12px 0;color:var(--accent)}
-    .about p{color:var(--muted);line-height:1.6}
-    .projects-grid{
-      display:grid; gap:16px;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      margin-top:8px;
+
+    header {
+      padding: 28px 16px;
+      text-align: center;
+      background: linear-gradient(
+        0deg,
+        rgba(255,255,255,0.02),
+        transparent
+      );
+      border-bottom: 1px solid rgba(255,255,255,0.03);
     }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
-      border:1px solid rgba(255,255,255,0.03); padding:14px; border-radius:var(--radius);
-      display:flex; flex-direction:column; gap:10px; transition:transform .18s ease, box-shadow .18s ease;
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.6px;
     }
-    .card:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-    .thumb{width:100%; aspect-ratio:3/4; min-height:180px; overflow:hidden; border-radius:10px; background:#061024; display:flex;align-items:center;justify-content:center}
-    .thumb img, .thumb video{width:100%; height:100%; object-fit:cover; display:block}
-    .card h3{margin:4px 0 0 0;font-size:1.05rem}
-    .card h3 a{color:var(--accent);text-decoration:none}
-    .card h3 a:hover{text-decoration:underline}
-    .card p{margin:6px 0 0 0;color:#e6eef8;font-size:0.95rem}
-    .meta{display:flex;gap:10px;align-items:center;margin-top:auto;color:var(--muted);font-size:0.85rem}
-    .btn{margin-left:auto;background:transparent;border:1px solid rgba(125,211,252,0.18);padding:6px 10px;color:var(--accent);border-radius:8px;text-decoration:none}
-    .contact a{color:var(--accent-light)}
-    footer{padding:18px;text-align:center;color:var(--muted);font-size:0.9rem}
-    @media (max-width:420px){ .thumb{min-height:140px} header h1{font-size:1.3rem} }
+
+    header p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 28px auto;
+      padding: 0 18px 80px;
+    }
+
+    section {
+      margin: 22px 0;
+      padding: 18px;
+      background: var(--glass);
+      border-radius: 12px;
+    }
+
+    section h2 {
+      margin: 0 0 12px 0;
+      color: var(--accent);
+    }
+
+    .about p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Project layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(0,0,0,0.06)
+      );
+      border: 1px solid rgba(255,255,255,0.03);
+      padding: 14px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform .18s ease, box-shadow .18s ease;
+      min-width: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    }
+
+    /* Landscape project images */
+    .thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #061024;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumb img,
+    .thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3 {
+      margin: 4px 0 0 0;
+      font-size: 1.05rem;
+    }
+
+    .card h3 a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .card h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .card p {
+      margin: 6px 0 0 0;
+      color: #e6eef8;
+      font-size: 0.95rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .btn {
+      margin-left: auto;
+      background: transparent;
+      border: 1px solid rgba(125,211,252,0.18);
+      padding: 6px 10px;
+      color: var(--accent);
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .contact a {
+      color: var(--accent-light);
+    }
+
+    footer {
+      padding: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 650px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Storm de Kam</h1>
-    <p>Mechanical Engineer · Robotics · Hardware Development.</p>
+    <p>Mechanical Engineer · Robotics · Hardware Development</p>
   </header>
 
   <main>
+
     <section class="about">
       <h2>About</h2>
       <p>
-        I'm a mechanical engineer with an MSc from TU Delft (Cum Laude), interested in the design and development of robotic systems. My work spans mechanical design, prototyping and manufacturing, sensor integration, and robot control.
+        I'm a mechanical engineer with an MSc from TU Delft (Cum Laude),
+        interested in the design and development of robotic systems.
+        My work spans mechanical design, prototyping and manufacturing,
+        sensor integration, and robot control.
 
-        I've worked on projects ranging from a powered medical exoskeleton to a pneumatically actuated soft quadruped robot. After graduating, I gained industry experience at H2L Robotics, where I worked on commissioning robotic systems, building prototypes and troubleshooting hardware in the field.
+        I've worked on projects ranging from a powered medical exoskeleton
+        to a pneumatically actuated soft quadruped robot. After graduating,
+        I gained industry experience at H2L Robotics, where I worked on
+        commissioning robotic systems, building prototypes and
+        troubleshooting hardware in the field.
 
-        I enjoy working across disciplines and getting involved in the entire development process, from an initial concept to a working robotic system. I'm particularly interested in unconventional robotic systems, where mechanical design, sensing and control come together.
+        I enjoy working across disciplines and getting involved in the
+        entire development process, from an initial concept to a working
+        robotic system. I'm particularly interested in unconventional
+        robotic systems, where mechanical design, sensing and control
+        come together.
       </p>
     </section>
 
@@ -74,57 +227,103 @@
 
       <div class="projects-grid">
 
+        <!-- Project MARCH -->
         <article class="card" aria-labelledby="p1-title">
           <a class="thumb" href="project-march.html" title="Project MARCH">
-            <img src="figures/project-march/final design front.jpeg" alt="Project MARCH cover image">
+            <img
+              src="figures/project-march/final design front.jpeg"
+              alt="Project MARCH exoskeleton"
+            >
           </a>
+
           <div>
-            <h3 id="p1-title"><a href="project-march.html">Project MARCH</a></h3>
-            <p>Mechanical design of exoskeleton joints under tight deadlines in a large multidisciplinary team.</p>
+            <h3 id="p1-title">
+              <a href="project-march.html">Project MARCH</a>
+            </h3>
+            <p>
+              Mechanical design of exoskeleton joints under tight deadlines
+              in a large multidisciplinary team.
+            </p>
+
             <div class="meta">
-              <span>Team project · Aug 2022-Aug 2023</span>
+              <span>Team project · Aug 2022–Aug 2023</span>
               <a class="btn" href="project-march.html">Read</a>
             </div>
           </div>
         </article>
 
+        <!-- Soft Quadruped -->
         <article class="card" aria-labelledby="p3-title">
           <a class="thumb" href="soft-quadruped.html" title="Soft Quadruped">
-            <img src="figures/soft-quadruped/cover-image.png" alt="Soft quadruped cover image">
+            <img
+              src="figures/soft-quadruped/cover-image.png"
+              alt="Soft quadruped robot"
+            >
           </a>
+
           <div>
-            <h3 id="p3-title"><a href="soft-quadruped.html">Design, Sensing and Control of a Tactile Soft Quadruped Robot</a></h3>
-            <p>Design, sensing and control of a pneumatically actuated soft quadruped robot with tactile suction cup feet.</p>
+            <h3 id="p3-title">
+              <a href="soft-quadruped.html">
+                Design, Sensing and Control of a Tactile Soft Quadruped Robot
+              </a>
+            </h3>
+            <p>
+              Design, sensing and control of a pneumatically actuated
+              soft quadruped robot with tactile suction cup feet.
+            </p>
+
             <div class="meta">
-              <span>Research assignment & Thesis · Aug 2024-Nov 2025</span>
+              <span>Research assignment & Thesis · Aug 2024–Nov 2025</span>
               <a class="btn" href="soft-quadruped.html">Read</a>
             </div>
           </div>
         </article>
 
+        <!-- Eye Oculus -->
         <article class="card" aria-labelledby="p2-title">
           <a class="thumb" href="eye-oculus.html" title="Eye Oculus">
-            <img src="figures/eye-oculus/cover image.png" alt="Eye Oculus cover image">
+            <img
+              src="figures/eye-oculus/cover image.png"
+              alt="Eye Oculus assistive device"
+            >
           </a>
+
           <div>
-            <h3 id="p2-title"><a href="eye-oculus.html">Eye Oculus</a></h3>
-            <p>User-centered design of a handheld assistive device, iterated based on user feedback.</p>
+            <h3 id="p2-title">
+              <a href="eye-oculus.html">Eye Oculus</a>
+            </h3>
+            <p>
+              User-centered design of a handheld assistive device,
+              iterated based on user feedback.
+            </p>
+
             <div class="meta">
-              <span>Product design ·  March-June 2021</span>
+              <span>Product design · March–June 2021</span>
               <a class="btn" href="eye-oculus.html">Read</a>
             </div>
           </div>
         </article>
 
+        <!-- H2L Robotics -->
         <article class="card" aria-labelledby="p4-title">
           <a class="thumb" href="h2l-robotics.html" title="H2L Robotics">
-            <img src="figures/H2L-robotics/cover-image.jpg" alt="Tulip selection robot at H2L Robotics">
+            <img
+              src="figures/H2L-robotics/cover-image.jpg"
+              alt="Tulip selection robot at H2L Robotics"
+            >
           </a>
+
           <div>
-            <h3 id="p4-title"><a href="h2l-robotics.html">H2L Robotics</a></h3>
-            <p>Field service, commisioning and testing of agricultural robotic systems, delivering field service to over 100 tulip and potato growers.</p>
+            <h3 id="p4-title">
+              <a href="h2l-robotics.html">H2L Robotics</a>
+            </h3>
+            <p>
+              Commissioning, testing and troubleshooting agricultural
+              robotic systems, with field support for more than 100 growers.
+            </p>
+
             <div class="meta">
-              <span>Mechatronics Engineer · Feb-Oct 2026</span>
+              <span>Mechatronics Engineer · Feb–Oct 2026</span>
               <a class="btn" href="h2l-robotics.html">Read</a>
             </div>
           </div>
@@ -135,14 +334,17 @@
 
     <section class="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:storm@pdekam.nl">storm@pdekam.nl</a></p>
+      <p>
+        Email:
+        <a href="mailto:storm@pdekam.nl">storm@pdekam.nl</a>
+      </p>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Storm de Kam</p>
+    <p>© 2026 Storm de Kam</p>
   </footer>
 
 </body>
 </html>
-<!-- ...existing code... -->
